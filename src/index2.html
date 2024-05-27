@@ -1,0 +1,382 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Navigation System for CU</title>
+    <link rel="stylesheet" href="css/index2.css">
+    <style>
+        .dropbtn {
+            background-color: #1e1e23;
+            color: rgb(255, 1, 1);
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #000000;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: rgb(231, 21, 21);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {background-color: #f60d0d}
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #1d1a1a;
+        }
+    </style>
+</head>
+<body>
+
+<section class="header">
+
+    <nav>
+        <img src="images/cu-logo.png" alt="Logo" width="192">
+
+        <div class="logo"><h1></h1></div>
+
+        <div class="nav-links">
+            <ul>
+
+                <li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">ABOUT</a>
+                        <div class="dropdown-content">
+                            <a href="https://www.cuchd.in/about/">Overview</a>
+                            <a href="https://www.cuchd.in/about/vision-and-mission.php">Vision & Mission</a>
+                            <a href="https://www.cuchd.in/about/Awards-and-Rankings.php">Awards & Ranking</a>
+                            <a href="https://www.cuchd.in/core-values/">Core Values</a>
+                        </div>
+                    </li>
+
+
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">PROGRAMS</a>
+                    <div class="dropdown-content">
+                        <a href="https://www.cuchd.in/engineering/">Engineering</a>
+                        <a href="https://www.cuchd.in/management/">Management</a>
+                        <a href="https://www.cuchd.in/computing/">Computer Applications</a>
+                        <a href="https://www.cuchd.in/liberal-arts-and-humanities/">Arts-and-humanities</a>
+                        <a href="https://www.cuchd.in/basic-sciences/msc-data-sciences.php">Law</a>
+                        <a href="https://www.cuchd.in/legal-studies/">CIVIL</a>
+                    </div>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">CAMPUS LIFE</a>
+                    <div class="dropdown-content">
+                        <a href="https://www.cuchd.in/campus-life/tech-invent.php">Tech Events</a>
+                        <a href="https://www.cuchd.in/latest-news/">latest-news</a>
+                        <a href="https://www.cuchd.in/campus-life/live-concerts.php">Events & Activities</a>
+                        <a href="https://www.cuchd.in/student-services/sports.php">Sports</a>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <!-- nav end -->
+    <div class="text-box">
+
+        <h1>Chandigarh University Virtual Tour </h1>
+        <p>Information about the Chandigarh University building, academic and campus life and surrounding suburbs and attractions to give you an overview of Chandigarh University facilities and services and help orient you to the campus and surrounding areas.</p>
+        <a href="https://www.cuchd.in/about//" class="hero-btn">Click To Know More</a>
+    </div>
+</section>
+
+<section class="contact">
+    <div class="container">
+        <h1>Chandigarh University Virtual Tour</h1>
+        <p>Information about the Chandigarh University building, academic and campus life and surrounding suburbs and attractions to give you an overview of Chandigarh University facilities and services and help orient you to the campus and surrounding areas.</p>
+
+        <div class="contact-info">
+            <h2>Contact information</h2>
+            <p>+91 160 3014444</p>
+            <p>Chandigarh University,<br>Gharuan, Mohali<br>(Punjab)</p>
+        </div>
+
+        <div class="directions">
+            <h2>Directions</h2><br>
+            <a href="https://www.google.com/maps/place/Chandigarh+University/@30.7696242,76.5762017,21z/data=!4m6!3m5!1s0x390ffb140bd63e07:0x68591e334d17a988!8m2!3d30.7687902!4d76.5753719!16s%2Fm%2F0xn7vdp?entry=ttu">View in Google Maps</a>
+        </div>
+        <br>
+        <div class="travel">
+            <h2>Travel</h2><br>
+            <a href="https://www.cuchd.in/contact/how-to-reach-us.php">Travel options</a>
+        </div>
+        <br>
+
+
+        <div class="distance-calculator">
+            <h2>Distance Calculator</h2>
+
+            <input type="text" id="search" onkeyup="searchFunction()" placeholder="     Search for a location" style="height: 29.0px;">
+
+
+            <select id="start-location" style="height: 32px;">
+
+                <option>Select your location</option>
+                <option>Andhra Pradesh</option>
+                <option>Arunachal Pradesh</option>
+                <option>Assam</option>
+                <option>Bihar</option>
+                <option>Chhattisgarh</option>
+                <option>Goa</option>
+                <option>Gujarat</option>
+                <option>Haryana</option>
+                <option>Himachal Pradesh</option>
+                <option>Jharkhand</option>
+                <option>Karnataka</option>
+                <option>Kerala</option>
+                <option>Madhya Pradesh</option>
+                <option>Maharashtra</option>
+                <option>Manipur</option>
+                <option>Meghalaya</option>
+                <option>Mizoram</option>
+                <option>Nagaland</option>
+                <option>Odisha</option>
+                <option>Punjab</option>
+                <option>Rajasthan</option>
+                <option>Sikkim</option>
+                <option>Tamil Nadu</option>
+                <option>Telangana</option>
+                <option>Tripura</option>
+                <option>Uttar Pradesh</option>
+                <option>Uttarakhand</option>
+                <option>West Bengal</option>
+            </select><br><br>
+            <select id="end-location">
+
+
+				
+                <option>Select your location</option>
+                <option selected>Chandigarh University</option>
+            </select>
+            <br>
+            <br>
+            <button id="show-distance">SHOW DISTANCE</button>
+        </div>
+
+    </div>
+</section>
+
+<section class="course">
+    <h1>Courses Details In Brief</h1>
+    <p>Courses in Chandigarh University</p>
+    <div class="row">
+        <div class="course-col">
+            <a href="https://www.cuchd.in/engineering/be-information-technology.php">INFORMATION TECHNOLOGY</a>
+
+        </div>
+        <div class="course-col">
+            <a href="https://www.cuchd.in/computing/bsc-computer-science.php">COMPUTER SCIENCE</a>
+
+        </div>
+        <div class="course-col">
+            <a href="https://cuils.cuchd.in/cgi-bin/koha/opac-detail.pl?biblionumber=122913&shelfbrowse_itemnumber=34849">ELECTRONICS</a>
+
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="course-col">
+            <a href="https://www.cuchd.in/uie/mechanical-engg/course-curriculum.php">MACHENICAL</a>
+
+        </div>
+        <div class="course-col">
+            <a href="https://www.cuchd.in/contact/how-to-reach-us.php">CIVIL</a>
+
+        </div>
+        <div class="course-col">
+            <a href="https://www.cuchd.in/contact/how-to-reach-us.php">CHEMICAL</a>
+
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="course-col">
+            <a href="https://www.cuchd.in/contact/how-to-reach-us.php">CHEM-PAINT</a>
+
+        </div>
+        <div class="course-col">
+            <a href="https://www.cuchd.in/contact/how-to-reach-us.php">AGGRICULTURE</a>
+
+        </div>
+        <div class="course-col">
+            <a href="https://www.cuchd.in/contact/how-to-reach-us.php">PHARMACY</a>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="campus">
+    <h1>Some Photos Of Our Campus</h1>
+    <p>Chandigarh University Chandigarh Campus Tour and Image Gallery.</p>
+   
+    <div class="slideshow-container">
+       
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <div class="images-container"></div>
+        <br>
+    </div>
+</section>
+
+<script src="index.js"></script>
+<script>
+    let slideIndex = 0;
+    const images = ["college1.png", "college3.png", "2.jpg", "3.webp", "4.jpg", "5.webp", "6.webp", "7.webp", "8.webp", "9.webp", "10.webp", "11.jpg", "4.webp", "13.jpg", "college4.png"];
+    showSlides();
+
+    
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let container = document.querySelector(".images-container");
+        if (slideIndex > images.length) {slideIndex = 1}
+        if (slideIndex < 1) {slideIndex = images.length}
+        container.innerHTML = "";
+        for (i = 0; i < images.length; i++) {
+            let slide = document.createElement("div");
+            slide.className = "mySlides fade";
+            let number = document.createElement("div");
+            number.className = "numbertext";
+            number.innerText = (i + 1) + " / " + images.length;
+            let img = document.createElement("img");
+            img.src = "images/" + images[i];
+            img.style.width = "100%";
+            let text = document.createElement("div");
+           
+            
+            slide.appendChild(number);
+            slide.appendChild(img);
+            slide.appendChild(text);
+            container.appendChild(slide);
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex-1].style.display = "block";
+    }
+</script>
+
+<style>
+   
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        transition:  ease;
+        border-radius: 0 3px 3px 0;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+  
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+   
+    .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+    }
+</style>
+
+
+
+<section class="testimonials">
+    <h1>Some Reviews About Chandigarh University Campus </h1>
+    <p>Only for learning purpose</p>
+    <div class="row">
+        <div class="testimonial-col">
+            <img src="images/principle.jpg" alt="">
+            <div>
+                <p>Infrastructure of the university is as beautiful. In every block there is library available which is perk for student for self study. In central library there are many books available. PC is available in labs which up to date updated. Campus size is approx. 250 acre. Every class has approx. 70 student in each.Campus life is best part of this university here you will get the students from all over the India as well as international so you will get a lot of exposure. People here are so friendly. There is place called Fountain where you can sit in free time with your friends. There are two grounds available. There is so many clubs available approx. for every activity, dance, singing, theatre, games coding, etc. There is every month event or fest is happening in fest they call singers, DJ, actors, etc.</p>
+                <h3>SATYAM RAJ<br>
+                    Bachelor of Engineering [B.E]</h3>
+
+            </div>
+        </div>
+        <div class="testimonial-col">
+
+            <div>
+                <p>We have various academic blocks in which your respective classes will be held. The structure and architecture of the buildings are quite impressive with raw brick design which gives a premium institute feel to the students, I have seen these types of design similar in some IIM's. Overall you won't be having any problem in your classes.The crowd is a good and a bad point. It is a bad point because the University enrolls many students at a time, but on the brighter side you will get to interact with many students of various cultural background and trust me this is very important for your character development.?</p>
+                <h3>Anshu Kumar<br>
+                    Bachelor of Engineering [B.E], 2026</h3>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="cta">
+    <h1>One of the most popular college<br>in the world.</h1>
+
+</section>
+
+<section class="footer">
+
+    <h4>About Us</h4>
+    <p>This is sample webiste of our University</p>
+    <p>Created by <strong>Anshu ks</strong> with the help of <strong> my teammates</strong> </p>
+</section>
+
+<script src="index.js"></script>
+<script>
+    function searchFunction() {
+      var input, filter, select, option, i;
+      document.getElementById("search"); // Change the width to 300px
+      document.getElementById("search"); // Change the height to 200px
+
+      filter = input.value.toUpperCase();
+      select = document.getElementById("start-location");
+      option = select.getElementsByTagName("option");
+      for (i = 0; i < option.length; i++) {
+        if (option[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+          option[i].style.display = "";
+        } else {
+          option[i].style.display = "none";
+        }
+      }
+    }
+</script>
+
+
+</body>
+</html>
